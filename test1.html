@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function changeText() {
+            //alert("Fonction changeText");
+            for(i=0;i<3;i++) {
+                item = document.getElementsByTagName("a")[i]
+                item.setAttribute(
+                    "href", "https://www.google.com?q="+item.innerText
+                );
+            }
+            items = document.getElementsByClassName("block");
+            for(i=0;i<items.length;i++) {
+                items[i].setAttribute("style", "color: red");
+            }
+            document.getElementsByTagName("table")[0].innerHTML =
+                "<tr><th>nom</th><th>prénom</th><th>adresse</th></tr>" +
+                "<tr><td>dummy</td><td>dummy</td><td>dummy</td></tr>" +
+                "<tr><td>dummy2</td><td>dummy2</td><td>dummy2</td></tr>";
+        }
+    </script>
+</head>
+<body>
+<div class="block">The content of the first block</div>
+<a href="https://www.google.com?q=1990">1990</a>
+<a href="https://www.google.com?q=1990">1998</a>
+<a href="https://www.google.com?q=1990">2003</a>
+
+<button id="button1" onclick="changeText()">Ok</button>
+
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+    </tr>
+    <tr>
+        <td>Dummy</td>
+        <td>Dummy</td>
+        <td>Dummy</td>
+    </tr>
+</table>
+</body>
+</html>

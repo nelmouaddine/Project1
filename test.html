@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function changeText() {
+            //alert(fonction changeText);
+            for(i=0;i<3;i++){
+            item=document.getElementsByClassName("a")[i]
+                item.setAttribute(
+                    "href","https://www.google.com?q="+item.innerText
+                );
+            }
+            items=document.getElementsByClassName("block");
+            for(i=0;i<items.length;i++) {
+                items[i].setAttribute("style","color:red");
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="block"> The content of the first block</div>
+<a href="https://www.google.com?q=1990">1990</a>
+<a href="https://www.google.com?q=1990">1998</a>
+<a href="https://www.google.com?q=1990">2003</a>
+    <button id="button1" on click="changingText()">OK</button>
+</body>
+</html>

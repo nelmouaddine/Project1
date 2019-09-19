@@ -1,0 +1,24 @@
+body {
+    background-color: gray;
+    color:blue;
+}
+p {
+    background-color:darkcyan;
+    border:5px dashed black;
+    margin: 20px;
+    padding:40px;
+}
+a {
+        color:yellow;
+
+}
+table ,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+}
+.block {
+    background-color: gray;
+}
+#div1 {
+    color:red;
+}
